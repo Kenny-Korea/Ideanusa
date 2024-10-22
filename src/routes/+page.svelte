@@ -1,66 +1,113 @@
 <script lang="ts">
+	import Content from "$lib/components/Content.svelte";
+	import Title from "$lib/components/Title.svelte";
 	import { onMount } from "svelte";
 	import { fade } from "svelte/transition";
-	import { tick } from "svelte";
 
-	let showContent = false;
+	let sectionVisible = false;
 
-	onMount(async () => {
-		console.log("Page mounted");
-		await tick(); // DOM이 업데이트될 때까지 기다립니다.
-		showContent = true; // 트랜지션을 트리거합니다.
+	onMount(() => {
+		console.log("Page loaded");
+		sectionVisible = true;
 	});
 </script>
 
-<section transition:fade>
-	{#if showContent}
-		<div class="title">
-			<span in:fade={{ delay: 500 }}>A reliable agency in learning and human development.</span>
-			<button in:fade={{ delay: 1000 }}>Our Services</button>
+<section
+	transition:fade={{ duration: 5000 }}
+	style="visibility: {sectionVisible ? 'visible' : 'hidden'};"
+>
+	<video width="640" height="360" controls preload="auto" poster="poster.jpg" autoplay muted>
+		<track src="subtitles_en.vtt" kind="captions" srclang="en" label="English" />
+		<source src="/videos/video.mp4" type="video/mp4" />
+		브라우저가 비디오 태그를 지원하지 않습니다.
+	</video>
+	<Title title="Our Value" />
+	<Content>
+		<div class="grid-container value">
+			<div class="grid-item">Honesty</div>
+			<div class="grid-item">
+				Emphasizing truthfulness, transparency, and integrity in all interactions.
+			</div>
+			<div class="grid-item">Inspiration</div>
+			<div class="grid-item">
+				Motivating and uplifting others through positive actions, words, and example.
+			</div>
+			<div class="grid-item">Purpose-driven</div>
+			<div class="grid-item">
+				Acting with intention and alignment toward a greater goal or mission that transcends
+				individual interests.
+			</div>
 		</div>
-	{/if}
+	</Content>
+	<Title title="Our Vision" />
+	<Content>
+		<span class="vision">Empowering people to be able to contribute more to the nation</span>
+	</Content>
+	<Title title="Our Mission" />
+	<Content>
+		<div class="grid-container mission">
+			<div class="grid-item">1.</div>
+			<div class="grid-item">
+				Creating training materials and consulting services that are always developing, providing
+				solutions that are right on target, easy to understand and easy to apply.
+			</div>
+			<div class="grid-item">2.</div>
+			<div class="grid-item">
+				Provide training and consulting services that are right on target and according to needs.
+			</div>
+		</div></Content
+	>
+	<img src="/images/promo.png" alt="promo" />
 </section>
 
 <style lang="scss">
+	@import "$lib/assets/global.scss";
 	section {
-		position: relative;
 		width: 100%;
-		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 
-		.title {
-			position: absolute;
-			top: 40%;
+		video {
 			width: 100%;
-			height: 3rem;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			gap: 1rem;
-
-			span {
-				font-size: 2.3rem;
-				font-weight: bold;
-				color: #eee;
-				font-weight: 900;
-				text-shadow: rgba($color: #000000, $alpha: 0.2) 2px 2px 2px;
-			}
-
-			button {
-				margin-top: 1rem;
-				padding: 0.8rem 3rem;
-				border: 1px solid #fff;
-				color: #fff;
-				font-size: 1.7rem;
-				box-sizing: border-box;
-				background-color: transparent;
-				cursor: pointer;
-				transition: background-color 1s ease;
-
-				&:hover {
-					background-color: rgba(90, 90, 90, 0.8);
-				}
-			}
+			height: auto;
 		}
+	}
+
+	.grid-container {
+		width: 100%;
+		display: grid;
+		gap: 10px;
+
+		&.value {
+			grid-template-columns: 1fr 5fr; /* 왼쪽 열은 좁게, 오른쪽 열은 넓게 설정 */
+			grid-template-rows: repeat(2, 1fr);
+		}
+
+		&.mission {
+			grid-template-columns: 1fr 20fr;
+			grid-template-rows: repeat(2, 1fr);
+		}
+	}
+
+	.grid-item {
+		padding: 1rem;
+		font-size: 1.05rem;
+
+		&:nth-child(odd) {
+			color: $main;
+			font-weight: 900;
+		}
+	}
+
+	.vision {
+		margin: 1rem;
+		font-size: 1.2rem;
+	}
+
+	.mission {
+		width: 100%;
+		font-size: 1.05rem;
+		line-height: 1.5rem;
 	}
 </style>

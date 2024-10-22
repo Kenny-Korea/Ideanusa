@@ -5,11 +5,14 @@
 	<slot />
 </section>
 
-<style>
+<style lang="scss">
 	section {
 		width: 100%;
-		padding: 2rem;
 		height: fit-content;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		background-color: #ffffff;
 		box-sizing: border-box;
 	}

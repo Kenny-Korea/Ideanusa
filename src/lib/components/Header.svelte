@@ -1,51 +1,49 @@
 <script lang="ts">
+	const handleClickLogo = () => {
+		location.href = "/";
+	};
 </script>
 
 <header>
-	<div class="wrapper">
-		<img src="/images/logo.png" class="logo" alt="logo" />
-		<nav>
-			<a href="/">Home</a>
-			<a href="/about">About</a>
-			<a href="/contact">Contact</a>
-		</nav>
-	</div>
+	<nav>
+		<button class="a11y" on:click={handleClickLogo}>
+			<img src="/images/logo.png" id="logo" alt="logo" />
+		</button>
+		<a href="/about">About</a>
+		<a href="/service">Our Services</a>
+		<a href="/people">Our People</a>
+		<a href="/testimony">Testimony</a>
+		<a href="/news">News</a>
+		<a href="/contact">Contact</a>
+	</nav>
 </header>
 
 <style lang="scss">
 	@import "$lib/assets/global.scss";
-
 	header {
+		position: sticky;
 		width: 100%;
-		height: 10rem;
+		height: 7rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
 
-		.wrapper {
-			width: 80%;
-			min-width: 1280px;
+		nav {
+			width: 1280px;
+			height: 3rem;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 
-			.logo {
+			#logo {
 				width: 10rem;
 			}
 
-			nav {
-				display: flex;
-				justify-content: flex-end;
-				width: 20rem;
-				gap: 2rem;
+			a {
 				font-size: 1.2rem;
-
-				a {
-					text-decoration: none;
-					color: $sub;
-					color: rgb(255, 241, 232);
-				}
+				font-weight: 900;
+				color: $main;
+				text-decoration: none;
 			}
 		}
 	}

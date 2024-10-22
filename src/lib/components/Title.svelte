@@ -7,17 +7,17 @@
 </section>
 
 <style lang="scss">
+	@import "$lib/assets/global.scss";
 	section {
 		width: 100%;
-		height: 5rem;
 		display: flex;
-		padding-left: 2rem;
-		/* justify-content: center; */
-		align-items: center;
+		justify-content: center;
 	}
 
 	.title {
+		margin: 2rem 0 1rem 0;
 		font-size: 2rem;
-		font-weight: bold;
+		font-weight: 900;
+		color: $main;
 	}
 </style>
