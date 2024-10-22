@@ -62,6 +62,7 @@
 
 <style lang="scss">
 	@import "$lib/assets/global.scss";
+
 	section {
 		width: 100%;
 		display: flex;
