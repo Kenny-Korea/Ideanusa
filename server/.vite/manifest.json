@@ -88,5 +88,17 @@
     "imports": [
       "_ssr.js"
     ]
+  },
+  "src/routes/service/+page.svelte": {
+    "file": "entries/pages/service/_page.svelte.js",
+    "name": "entries/pages/service/_page.svelte",
+    "src": "src/routes/service/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.ClXxCM_x.css"
+    ]
   }
 }
