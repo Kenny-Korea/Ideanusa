@@ -7,7 +7,7 @@
 <header>
 	<nav>
 		<button class="a11y" on:click={handleClickLogo}>
-			<img src="/images/logo.png" id="logo" alt="logo" />
+			<img src="./images/logo.png" id="logo" alt="logo" />
 		</button>
 		<a href="/about">About</a>
 		<a href="/service">Our Services</a>

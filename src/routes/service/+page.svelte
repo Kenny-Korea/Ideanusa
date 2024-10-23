@@ -3,11 +3,11 @@
 </script>
 
 <section>
-	<img src="/images/service/consulting.jpg" alt="consulting" />
+	<img src="./images/service/consulting.jpg" alt="consulting" />
 	<Description />
 	<Description />
-	<img src="/images/service/consulting.jpg" alt="consulting" />
-	<img src="/images/service/consulting.jpg" alt="consulting" />
+	<img src="./images/service/consulting.jpg" alt="consulting" />
+	<img src="./images/service/consulting.jpg" alt="consulting" />
 	<Description />
 </section>
 
