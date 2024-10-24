@@ -1,6 +1,6 @@
 <script lang="ts">
 	const handleClickLogo = () => {
-		location.href = "/";
+		location.href = "./";
 	};
 </script>
 
@@ -9,12 +9,12 @@
 		<button class="a11y" on:click={handleClickLogo}>
 			<img src="./images/logo.png" id="logo" alt="logo" />
 		</button>
-		<a href="/about">About</a>
-		<a href="/service">Our Services</a>
-		<a href="/people">Our People</a>
-		<a href="/testimony">Testimony</a>
-		<a href="/news">News</a>
-		<a href="/contact">Contact</a>
+		<a href="./about">About</a>
+		<a href="./service">Our Services</a>
+		<a href="./people">Our People</a>
+		<a href="./testimony">Testimony</a>
+		<a href="./news">News</a>
+		<a href="./contact">Contact</a>
 	</nav>
 </header>
 
