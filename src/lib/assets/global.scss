@@ -190,3 +190,9 @@ $main: #94618e;
 // $main: #94618e;
 $sub: rgb(109 106 103);
 // $sub: #f8eee7;
+
+.centerItem {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

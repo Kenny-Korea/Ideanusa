@@ -1,6 +1,6 @@
 <script lang="ts">
+	import ServiceItem from "$lib/components/service/ServiceItem.svelte";
 	import type { IServiceItem } from "$lib/types/type";
-	import ServiceItem from "./ServiceItem.svelte";
 
 	const serviceItems: IServiceItem[] = [
 		{

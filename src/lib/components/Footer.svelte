@@ -11,6 +11,7 @@
 	@import "$lib/assets/global.scss";
 
 	footer {
+		margin-top: 8rem;
 		width: 100%;
 		height: 7rem;
 		display: flex;

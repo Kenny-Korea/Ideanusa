@@ -16,7 +16,7 @@
 	transition:fade={{ duration: 5000 }}
 	style="visibility: {sectionVisible ? 'visible' : 'hidden'};"
 >
-	<video width="640" height="360" controls preload="auto" autoplay muted>
+	<video width="640" height="360" preload="auto" autoplay muted loop>
 		<track src="subtitles_en.vtt" kind="captions" srclang="en" label="English" />
 		<source src="./videos/video.mp4" type="video/mp4" />
 		브라우저가 비디오 태그를 지원하지 않습니다.

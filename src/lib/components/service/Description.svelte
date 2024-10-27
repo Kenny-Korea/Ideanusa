@@ -1,14 +1,15 @@
 <script lang="ts">
 </script>
 
-<section>hello</section>
+<section>
+	<slot />
+</section>
 
 <style lang="scss">
 	section {
 		width: 640px;
-		height: 480px;
-		padding: 1rem;
+		height: 400px;
+		padding: 2rem;
 		box-sizing: border-box;
-		background-color: yellow;
 	}
 </style>
