@@ -12,10 +12,11 @@
 	});
 </script>
 
-<section
+<section>
+	<!-- <section
 	transition:fade={{ duration: 5000 }}
 	style="visibility: {sectionVisible ? 'visible' : 'hidden'};"
->
+> -->
 	<video width="640" height="360" preload="auto" autoplay muted loop>
 		<track src="subtitles_en.vtt" kind="captions" srclang="en" label="English" />
 		<source src="./videos/video.mp4" type="video/mp4" />
