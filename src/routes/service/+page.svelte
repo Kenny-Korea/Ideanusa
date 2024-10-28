@@ -87,13 +87,15 @@
 		.training-title {
 			font-weight: 900;
 			text-align: center;
+			font-size: 1.2rem;
 			line-height: 1.5rem;
 		}
 		.training-description {
 			width: inherit;
 			display: flex;
 			flex-direction: column;
-			gap: 1rem;
+			/* justify-content: space-between; */
+			gap: 0.8rem;
 			line-height: 1.2rem;
 		}
 	}

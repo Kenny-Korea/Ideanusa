@@ -39,10 +39,6 @@
 			console.error("Error:", error);
 		}
 	}
-
-	// onMount(() => {
-	// 	phoneInput.addEventListener("input", handlePhoneInput);
-	// });
 </script>
 
 <section>

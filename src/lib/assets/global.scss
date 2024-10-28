@@ -128,7 +128,8 @@ html {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-size: calc(1rem + 0.2vw);
+	// font-size: calc(1rem + 0.2vw);
+	font-size: 1.1rem;
 }
 
 body {
@@ -158,10 +159,10 @@ div,
 input[type="button"],
 input[type="submit"] {
 	-webkit-tap-highlight-color: transparent; /* iOS Safari */
-	-webkit-user-select: none; /* Chrome/Safari/Opera */
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* Internet Explorer/Edge */
-	user-select: none; /* 비표준 브라우저 */
+	// -webkit-user-select: none; /* Chrome/Safari/Opera */
+	// -moz-user-select: none; /* Firefox */
+	// -ms-user-select: none; /* Internet Explorer/Edge */
+	// user-select: none; /* 비표준 브라우저 */
 }
 
 @font-face {
