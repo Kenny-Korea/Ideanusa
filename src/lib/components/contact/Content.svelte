@@ -17,6 +17,7 @@
 	section {
 		width: 100%;
 		margin: 2rem 0 1rem 0;
+		box-sizing: border-box;
 	}
 
 	.label {
@@ -31,5 +32,6 @@
 		height: fit-content;
 		box-sizing: border-box;
 		background-color: #f8eee7;
+		/* margin: 0 2rem; */
 	}
 </style>

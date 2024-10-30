@@ -2,6 +2,7 @@
 </script>
 
 <section>
+	<img src="./images/profile/group.png" alt="group" />
 	<img src="./images/profile/p1-rankin.png" alt="rankin" />
 	<img src="./images/profile/p2-sisca.png" alt="sisca" />
 	<img src="./images/profile/p3-aresty.png" alt="aresty" />
